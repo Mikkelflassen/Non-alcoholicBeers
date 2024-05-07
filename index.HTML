@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Alcoholic Beer Company</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .beer {
+    width: 200px;
+    transition: transform 0.5s ease; /* Smooth transition for tilt effect */
+  }
+
+  .beer-label {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth transition for label appearance */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="beer.jpg" alt="Beer" class="beer" id="beer1">
+  <img src="beer.jpg" alt="Beer" class="beer" id="beer2">
+</div>
+<div class="beer-label" id="beerLabel">0%</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+
+    // Tilt the beers based on scroll position
+    document.getElementById('beer1').style.transform = 'rotate(' + scrollPosition / 10 + 'deg)';
+    document.getElementById('beer2').style.transform = 'rotate(-' + scrollPosition / 10 + 'deg)';
+
+    // Show the label when scrolled past a certain point
+    if (scrollPosition > 200) {
+      document.getElementById('beerLabel').style.opacity = '1';
+    } else {
+      document.getElementById('beerLabel').style.opacity = '0';
+    }
+  });
+</script>
+</body>
+</html>
