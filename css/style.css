@@ -41,7 +41,7 @@ li {
 }
 
 .navbar .nav-links li {
-  margin-right: 60px; /* Adjust spacing between navigation items */
+  margin-right: 55px; /* Adjust spacing between navigation items */
 }
 
 .navbar .nav-links li:last-child {
@@ -82,6 +82,49 @@ main {
 .front img {
   max-width: 100%; /* Ensure image doesn't exceed container's width */
   margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Product section styles */
+/* Product section styles */
+.product {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 20px;
+}
+
+.product .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product .item img {
+  max-width: 100%;
+}
+
+.product.item h2,
+.product.item p {
+  margin: 10px 0;
+}
+
+/* Two by two grid */
+.two-by-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-gap: 20px;
+}
+
+.two-by-two .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+}
+
+.two-by-two .item img {
+  max-width: 100%;
 }
 
 .footer {
