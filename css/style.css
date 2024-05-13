@@ -20,7 +20,6 @@ li {
 }
 /* Navigation styles */
 .navbar {
-  padding: 10px 20px; /* Adjust padding as needed */
   display: flex;
   justify-content: space-between; /* Distribute items evenly */
   align-items: center; /* Vertically align items */
@@ -42,11 +41,11 @@ li {
 }
 
 .navbar .nav-links li {
-  margin-right: 80px; /* Adjust spacing between navigation items */
+  margin-right: 60px; /* Adjust spacing between navigation items */
 }
 
 .navbar .nav-links li:last-child {
-  margin-right: 0;
+  margin-right: 40px;
 }
 
 .navbar .nav-links a {
@@ -58,4 +57,38 @@ li {
 
 .navbar .nav-links a:hover {
   color: #000; /* Adjust link color on hover */
+}
+
+/* Main content styles */
+/* Main content styles */
+/* Main content styles */
+/* Main content styles */
+/* Main content styles */
+/* Main content styles */
+main {
+  padding: 40px;
+}
+
+.front {
+  display: flex;
+  align-items: center;
+}
+
+.front h1 {
+  font-size: 24px;
+  width: 100%; /* Set text to take up 50% of the container's width */
+}
+
+.front img {
+  max-width: 100%; /* Ensure image doesn't exceed container's width */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.footer {
+  background-color: #ed8c3a;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0; /* Juster bunden af footer til bunden af visningen */
+  width: 100%; /* Gør footeren spanne hele bredden */
 }
