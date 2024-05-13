@@ -59,6 +59,14 @@ li {
   color: #000; /* Adjust link color on hover */
 }
 
+.menu-container {
+  position: absolute;
+  top: 0;
+
+  z-index: 4; /* højere end andre elementer */
+  display: none;
+}
+
 /* Main content styles */
 /* Main content styles */
 /* Main content styles */
@@ -98,6 +106,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 20%;
 }
 
 .product .item img {
@@ -106,7 +115,6 @@ main {
 
 .product.item h2,
 .product.item p {
-  margin: 10px 0;
 }
 
 /* Two by two grid */
@@ -134,4 +142,73 @@ main {
   padding: 10px 0;
   bottom: 0; /* Juster bunden af footer til bunden af visningen */
   width: 100%; /* Gør footeren spanne hele bredden */
+}
+
+@media (max-width: 694px) {
+  .navbar {
+    display: none;
+  }
+  .main {
+    display: none;
+  }
+  .front {
+    display: none;
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ed8c3a;
+    z-index: 2;
+    display: block;
+  }
+
+  .menu-toggle {
+    padding: 15px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0; /* Position the menu to the right of its container */
+    background-color: #333;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .menu a:hover {
+    background-color: #575757;
+  }
+
+  .product {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 20px;
+  }
 }
