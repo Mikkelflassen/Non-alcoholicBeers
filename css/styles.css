@@ -1,0 +1,189 @@
+body {
+  background: linear-gradient(to bottom right, #ed8c3a, #f0b045);
+}
+/* Overskrifter med skrifttypen "Lora" */
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
+  font-weight: 700; /* Bold */
+  /* Andre stilarter som størrelse, farve, osv. */
+}
+
+/* Brødtekst med skrifttypen "Open Sans" */
+p,
+li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; /* Normal */
+  /* Andre stilarter som størrelse, farve, osv. */
+}
+
+nav {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.menu1 {
+  width: 100%;
+  top: 0;
+  right: 0; /* Justeret til at starte fra højre */
+  z-index: 4; /* højere end andre elementer */
+  display: flex;
+  justify-content: space-between; /* Fordel elementer jævnt med plads imellem */
+}
+
+.menu1 a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  font-size: 17px;
+
+  border-radius: 20px;
+}
+
+.logo1 img {
+  height: 80px;
+  width: auto;
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+
+  z-index: 4; /* højere end andre elementer */
+  display: none;
+}
+
+.menu-toggle {
+  padding: 15px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 45px;
+
+  width: fixed; /* fast bredde */
+  background-color: #333;
+  text-align: left;
+  padding: 15px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: #575757;
+}
+
+footer {
+  background-color: #898989;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+
+  position: fixed; /* footer forbliver nederst på visningen */
+  bottom: 0; /* Juster bunden af footer til bunden af visningen */
+  width: 100%; /* Gør footeren spanne hele bredden */
+}
+
+hr {
+  border: 0; /* Remove default border */
+  height: 1px; /* Set the height of the HR line */
+  background: #c36b54; /* This sets the color of the HR line */
+  width: 60%;
+  margin: 50px auto;
+}
+
+@media (max-width: 994px) {
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+    position: relative; /* Sørg for, at footer forbliver nederst på visningen */
+    bottom: 0; /* Juster bunden af footer til bunden af visningen */
+    width: 100%; /* Gør footeren spanne hele bredden */
+  }
+}
+
+@media (max-width: 694px) {
+  nav {
+    display: none;
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 2;
+    display: block;
+  }
+
+  .menu-toggle {
+    padding: 15px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0; /* Position the menu to the right of its container */
+    background-color: #333;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .menu a:hover {
+    background-color: #575757;
+  }
+}
