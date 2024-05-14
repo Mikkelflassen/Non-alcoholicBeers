@@ -47,6 +47,13 @@
   display: none;
 }
 
+.nav-links ul li a.active {
+  /* Style for active link */
+  font-weight: bold;
+  color: #000000; /* Example color for active link */
+  border-bottom: 2px solid #000000; /* Example border style for active link */
+}
+
 @media (max-width: 694px) {
   .navbar {
     display: none;
@@ -79,7 +86,7 @@
     height: 3px;
     margin-bottom: 5px;
     position: relative;
-    background: #fff;
+    background: #000000;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 1px;
@@ -90,21 +97,27 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 0;
-    right: 0; /* Position the menu to the right of its container */
-    background-color: #333;
+    top: 0px;
+    right: 50px; /* Position the menu to the right of its container */
+    background-color: #ed8c3a;
     text-align: left;
     padding: 15px;
   }
 
   .menu a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
   }
 
   .menu a:hover {
-    background-color: #575757;
+    background-color: #c96615;
+  }
+  .menu-container .menu a.active {
+    /* Style for active link */
+    font-weight: bold;
+    color: #000000; /* Example color for active link */
+    border-bottom: 2px solid #000000; /* Example border style for active link */
   }
 }

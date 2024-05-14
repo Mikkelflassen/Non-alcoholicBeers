@@ -32,7 +32,7 @@ h1 {
   background-color: rgba(255, 0, 0, 0.2); /* Adjust the background color */
 }
 .productButton {
-  background-color: rgba(255, 0, 0, 0.05); /* Adjust the background color */
+  background-color: rgba(255, 0, 0, 0.02); /* Adjust the background color */
   padding: 10px 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add this line */
 }
@@ -53,4 +53,10 @@ h1 {
   padding: 10px 0;
   bottom: 0; /* Juster bunden af footer til bunden af visningen */
   width: 100%; /* Gør footeren spanne hele bredden */
+}
+
+@media (max-width: 694px) {
+  .product .item p {
+    background-color: rgba(255, 0, 0, 0.2); /* Adjust the background color */
+  }
 }
