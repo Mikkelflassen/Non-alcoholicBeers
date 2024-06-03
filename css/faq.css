@@ -1,0 +1,123 @@
+main {
+  padding: 10px;
+}
+
+.front {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.front h1 {
+  font-size: 64px;
+  width: 100%; /* Set text to take up 50% of the container's width */
+  text-align: left;
+}
+.front h2 {
+  font-size: 40px;
+  width: 100%; /* Set text to take up 50% of the container's width */
+  text-align: left;
+  margin-top: -30px;
+}
+
+.front img {
+  max-width: 60%; /* Ensure image doesn't exceed container's width */
+  max-height: 800px;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.contact-faq {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Adjust the column width as needed */
+  gap: 20px; /* Adjust the gap between items */
+  margin-bottom: 20px;
+}
+
+.contact-form,
+.faq {
+  padding: 20px; /* Adjust padding for better spacing */
+  background-color: rgba(255, 0, 0, 0.2); /* Adjust the background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  background: linear-gradient(to bottom right, #ff7f15, #f0b045);
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #000000; /* Add a border around the question */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 270px;
+}
+
+.form-group button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to bottom right, #ff7f15, #f0b045);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #000000; /* Add a border around the question */
+}
+
+.form-group button:hover {
+  background-color: #45a049;
+}
+
+.question {
+  margin: 20px 0; /* Adjust margin for better spacing */
+  font-size: 18px; /* Adjust font size for better readability */
+  font-weight: bold;
+  cursor: pointer;
+  color: #000000;
+  border: 1px solid #000000; /* Add a border around the question */
+  padding: 20px; /* Adjust padding for better spacing */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+.answer {
+  display: none;
+  margin-bottom: 20px;
+  color: #000000;
+  border: #333;
+}
+
+.answer::before {
+  content: "A: ";
+  font-weight: bold;
+}
+
+/* Show answer when question is clicked */
+.question.active + .answer {
+  display: block;
+}
+
+.footer {
+  background-color: #ed8c3a;
+  color: #3c3c3c;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}

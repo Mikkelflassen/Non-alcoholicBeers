@@ -79,11 +79,11 @@ main {
 
 .footer {
   background-color: #ed8c3a;
-  color: #fff;
+  color: #3c3c3c;
   text-align: center;
   padding: 10px 0;
-  bottom: 0; /* Juster bunden af footer til bunden af visningen */
-  width: 100%; /* Gør footeren spanne hele bredden */
+  bottom: 0;
+  width: 100%;
 }
 
 @media (max-width: 694px) {
